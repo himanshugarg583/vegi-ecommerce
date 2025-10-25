@@ -1,0 +1,14 @@
+# Robots.txt for DIGITHELA
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /checkout
+Disallow: /cart
+
+# Sitemap location
+Sitemap: https://digithela.com/sitemap.xml
+
+# Crawl-delay for politeness
+Crawl-delay: 1

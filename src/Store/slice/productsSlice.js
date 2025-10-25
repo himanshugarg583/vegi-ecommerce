@@ -1,0 +1,803 @@
+// import { createSlice } from "@reduxjs/toolkit";
+
+// const productsData = [
+//    {
+//       "image":"https://egreensapp.s3.ap-south-1.amazonaws.com/LIVE/product/PRO079/1753864038067_lkadJ.png",
+//       "title":"Fresh Red Apples",
+//       "description":"Crisp and juicy red apples perfect for daily nutrition.",
+//       "price":120,
+//       "originalPrice":150,
+//       "quantity":{
+//          "amount":1,
+//          "unit":"kg"
+//       },
+//       "category":"fruits",
+//       "subCategory":"fresh-fruits",
+//       "totalStock":100,
+//       "offer":20,
+//       "collectionTag":[
+//          "everyday essentials",
+//          "evergreen"
+//       ]
+//    },
+//    {
+//       "image":"https://egreensapp.s3.ap-south-1.amazonaws.com/LIVE/product/PRO002/1709285819648_db4Mc.webp",
+//       "title":"Organic Bananas",
+//       "description":"Sweet ripe bananas packed with potassium.",
+//       "price":60,
+//       "originalPrice":80,
+//       "quantity":{
+//          "amount":1,
+//          "unit":"kg"
+//       },
+//       "category":"fruits",
+//       "subCategory":"fresh-fruits",
+//       "totalStock":200,
+//       "offer":25,
+//       "collectionTag":[
+//          "everyday essentials",
+//          "crispy & crunchy"
+//       ]
+//    },
+//    {
+//       "image":"https://egreensapp.s3.ap-south-1.amazonaws.com/LIVE/category/1742537055618_wAsTg.png",
+//       "title":"Alphonso Mangoes",
+//       "description":"Premium summer mangoes with rich taste and aroma.",
+//       "price":250,
+//       "originalPrice":300,
+//       "quantity":{
+//          "amount":1,
+//          "unit":"kg"
+//       },
+//       "category":"fruits",
+//       "subCategory":"summerDeals",
+//       "totalStock":80,
+//       "offer":15,
+//       "collectionTag":[
+//          "summer specials"
+//       ]
+//    },
+//    {
+//       "image":"https://egreensapp.s3.ap-south-1.amazonaws.com/LIVE/product/PRO021/1709066354592_FzaLN.png",
+//       "title":"New Zealand Kiwi",
+//       "description":"Imported exotic kiwis rich in Vitamin C.",
+//       "price":180,
+//       "originalPrice":210,
+//       "quantity":{
+//          "amount":1,
+//          "unit":"kg"
+//       },
+//       "category":"exotics",
+//       "subCategory":"exotic-fruits",
+//       "totalStock":50,
+//       "offer":10,
+//       "collectionTag":[
+//          "Exotics"
+//       ]
+//    },
+//    {
+//       "image":"https://egreensapp.s3.ap-south-1.amazonaws.com/LIVE/product/PRO064/06-11-2023/09e6b8ad-c7f2-400b-af20-e0efe818fdeb.webp",
+//       "title":"Fresh Broccoli",
+//       "description":"Crunchy and healthy green broccoli.",
+//       "price":90,
+//       "originalPrice":120,
+//       "quantity":{
+//          "amount":1,
+//          "unit":"kg"
+//       },
+//       "category":"vegetables",
+//       "subCategory":"exotic-vegetables",
+//       "totalStock":70,
+//       "offer":25,
+//       "collectionTag":[
+//          "Exotics",
+//          "evergreen"
+//       ]
+//    },
+//    {
+//       "image":"https://egreensapp.s3.ap-south-1.amazonaws.com/LIVE/product/PRO051/05-12-2023/1689c915-b61e-4117-80b3-b5b96499dabb.webp",
+//       "title":"Crisp Lettuce",
+//       "description":"Green lettuce perfect for salads and sandwiches.",
+//       "price":50,
+//       "originalPrice":70,
+//       "quantity":{
+//          "amount":1,
+//          "unit":"kg"
+//       },
+//       "category":"vegetables",
+//       "subCategory":"leaf-&-herbs",
+//       "totalStock":120,
+//       "offer":30,
+//       "collectionTag":[
+//          "everyday essentials"
+//       ]
+//    },
+//    {
+//       "image":"https://egreensapp.s3.ap-south-1.amazonaws.com/LIVE/category/1742213105974_HdwLS.png",
+//       "title":"Fresh Spinach",
+//       "description":"Iron-rich spinach leaves for daily cooking.",
+//       "price":40,
+//       "originalPrice":60,
+//       "quantity":{
+//          "amount":1,
+//          "unit":"kg"
+//       },
+//       "category":"vegetables",
+//       "subCategory":"leaf-&-herbs",
+//       "totalStock":150,
+//       "offer":33,
+//       "collectionTag":[
+//          "winter",
+//          "everyday essentials"
+//       ]
+//    },
+//    {
+//       "image":"https://egreensapp.s3.ap-south-1.amazonaws.com/LIVE/category/1742213217766_oZBiV.png",
+//       "title":"Fresh Strawberries",
+//       "description":"Sweet and tangy red strawberries.",
+//       "price":160,
+//       "originalPrice":200,
+//       "quantity":{
+//          "amount":1,
+//          "unit":"kg"
+//       },
+//       "category":"fruits",
+//       "subCategory":"fresh-fruits",
+//       "totalStock":60,
+//       "offer":20,
+//       "collectionTag":[
+//          "summer specials"
+//       ]
+//    },
+//    {
+//       "image":"https://egreensapp.s3.ap-south-1.amazonaws.com/LIV…10-2023/b12c2fa4-6e1f-43fa-b6f1-b5e3a67dde9d.webp",
+//       "title":"Blueberries Imported",
+//       "description":"Delicious antioxidant-rich blueberries.",
+//       "price":320,
+//       "originalPrice":380,
+//       "quantity":{
+//          "amount":1,
+//          "unit":"kg"
+//       },
+//       "category":"exotics",
+//       "subCategory":"exotic-fruits",
+//       "totalStock":40,
+//       "offer":15,
+//       "collectionTag":[
+//          "Exotics",
+//          "evergreen"
+//       ]
+//    },
+//    {
+//       "image":"https://egreensapp.s3.ap-south-1.amazonaws.com/LIVE/product/PRO343/30-10-2023/0ec70db0-8de3-4060-9147-0021ceda546b.webp",
+//       "title":"Colored Bell Peppers",
+//       "description":"Red, yellow, and green bell peppers for exotic cooking.",
+//       "price":110,
+//       "originalPrice":140,
+//       "quantity":{
+//          "amount":1,
+//          "unit":"kg"
+//       },
+//       "category":"vegetables",
+//       "subCategory":"exotic-vegetables",
+//       "totalStock":90,
+//       "offer":20,
+//       "collectionTag":[
+//          "crispy & crunchy"
+//       ]
+//    },
+//    {
+//       "image":"https://egreensapp.s3.ap-south-1.amazonaws.com/LIVE/product/PRO168/30-10-2023/66031174-9acb-4a55-bfdb-fea5f76be9e2.webp",
+//       "title":"Sweet Pineapple",
+//       "description":"Juicy and tangy pineapples for summer refreshment.",
+//       "price":100,
+//       "originalPrice":130,
+//       "quantity":{
+//          "amount":1,
+//          "unit":"kg"
+//       },
+//       "category":"fruits",
+//       "subCategory":"summerDeals",
+//       "totalStock":80,
+//       "offer":20,
+//       "collectionTag":[
+//          "summer specials"
+//       ]
+//    },
+//    {
+//       "image":"https://egreensapp.s3.ap-south-1.amazonaws.com/LIVE/comboOffer/1752601689004_ACOnK.webp",
+//       "title":"Red Tomatoes",
+//       "description":"Farm-fresh juicy red tomatoes.",
+//       "price":30,
+//       "originalPrice":50,
+//       "quantity":{
+//          "amount":1,
+//          "unit":"kg"
+//       },
+//       "category":"vegetables",
+//       "subCategory":"fresh-vegetables",
+//       "totalStock":200,
+//       "offer":40,
+//       "collectionTag":[
+//          "everyday essentials"
+//       ]
+//    },
+//    {
+//       "image":"https://egreensapp.s3.ap-south-1.amazonaws.com/LIVE/product/PRO021/1709066354592_FzaLN.png",
+//       "title":"Green Cucumbers",
+//       "description":"Cool and hydrating cucumbers for summer.",
+//       "price":40,
+//       "originalPrice":60,
+//       "quantity":{
+//          "amount":1,
+//          "unit":"kg"
+//       },
+//       "category":"vegetables",
+//       "subCategory":"summerDeals",
+//       "totalStock":130,
+//       "offer":33,
+//       "collectionTag":[
+//          "summer specials"
+//       ]
+//    },
+//    {
+//       "image":"https://egreensapp.s3.ap-south-1.amazonaws.com/LIVE/product/PRO239/30-10-2023/79194d23-e045-4e3f-9000-c1d48f17daf1.webp",
+//       "title":"Hass Avocado",
+//       "description":"Creamy avocados rich in healthy fats.",
+//       "price":300,
+//       "originalPrice":350,
+//       "quantity":{
+//          "amount":1,
+//          "unit":"kg"
+//       },
+//       "category":"exotics",
+//       "subCategory":"exotic-fruits",
+//       "totalStock":40,
+//       "offer":14,
+//       "collectionTag":[
+//          "Exotics"
+//       ]
+//    },
+//    {
+//       "image":"https://egreensapp.s3.ap-south-1.amazonaws.com/LIVE/product/PRO088/30-10-2023/5d00225b-3d6c-45e9-8c38-4483fa249bcf.webp",
+//       "title":"Fresh Mint Leaves",
+//       "description":"Refreshing aromatic mint leaves.",
+//       "price":30,
+//       "originalPrice":50,
+//       "quantity":{
+//          "amount":1,
+//          "unit":"kg"
+//       },
+//       "category":"vegetables",
+//       "subCategory":"leaf-&-herbs",
+//       "totalStock":180,
+//       "offer":40,
+//       "collectionTag":[
+//          "evergreen"
+//       ]
+//    },
+//    {
+//       "image":"https://egreensapp.s3.ap-south-1.amazonaws.com/LIVE/product/PRO261/30-10-2023/d8f39da6-64e7-453a-a6a1-6b0e437b87f4.webp",
+//       "title":"Red Onions",
+//       "description":"Premium quality onions for everyday use.",
+//       "price":40,
+//       "originalPrice":55,
+//       "quantity":{
+//          "amount":1,
+//          "unit":"kg"
+//       },
+//       "category":"vegetables",
+//       "subCategory":"fresh-vegetables",
+//       "totalStock":250,
+//       "offer":27,
+//       "collectionTag":[
+//          "everyday essentials"
+//       ]
+//    },
+//    {
+//       "image":"https://egreensapp.s3.ap-south-1.amazonaws.com/LIVE/product/PRO066/30-10-2023/035e9fc1-cac2-4b50-a6a0-afa1ecf5683d.webp",
+//       "title":"Organic Garlic",
+//       "description":"Fresh and aromatic garlic pods.",
+//       "price":90,
+//       "originalPrice":120,
+//       "quantity":{
+//          "amount":1,
+//          "unit":"kg"
+//       },
+//       "category":"vegetables",
+//       "subCategory":"fresh-vegetables",
+//       "totalStock":140,
+//       "offer":25,
+//       "collectionTag":[
+//          "evergreen"
+//       ]
+//    },
+//    {
+//       "image":"https://egreensapp.s3.ap-south-1.amazonaws.com/LIV…10-2023/41689c08-bace-4eea-96b5-a91fdc995ef0.webp",
+//       "title":"Dragon Fruit",
+//       "description":"Vibrant pink-skinned exotic fruit with mildly sweet taste.",
+//       "price":250,
+//       "originalPrice":300,
+//       "quantity":{
+//          "amount":1,
+//          "unit":"kg"
+//       },
+//       "category":"exotics",
+//       "subCategory":"exotic-fruits",
+//       "totalStock":50,
+//       "offer":17,
+//       "collectionTag":[
+//          "Exotics"
+//       ]
+//    },
+//    {
+//       "image":"https://egreensapp.s3.ap-south-1.amazonaws.com/LIVE/product/PRO030/1744694251492_FEbkj.png",
+//       "title":"Black Grapes",
+//       "description":"Juicy seedless black grapes rich in antioxidants.",
+//       "price":120,
+//       "originalPrice":160,
+//       "quantity":{
+//          "amount":500,
+//          "unit":"gram"
+//       },
+//       "category":"fruits",
+//       "subCategory":"fresh-fruits",
+//       "totalStock":120,
+//       "offer":25,
+//       "collectionTag":[
+//          "everyday essentials"
+//       ]
+//    },
+//    {
+//       "image":"https://egreensapp.s3.ap-south-1.amazonaws.com/LIV…10-2023/0dfb1b0f-5682-451f-813d-94e13f1d1cb7.webp",
+//       "title":"Sweet Corn Pack",
+//       "description":"Fresh golden corn ready for boiling or grilling.",
+//       "price":60,
+//       "originalPrice":80,
+//       "quantity":{
+//          "amount":1,
+//          "unit":"pack"
+//       },
+//       "category":"vegetables",
+//       "subCategory":"fresh-vegetables",
+//       "totalStock":100,
+//       "offer":25,
+//       "collectionTag":[
+//          "everyday essentials"
+//       ]
+//    },
+//    {
+//       "image":"https://egreensapp.s3.ap-south-1.amazonaws.com/LIVE/comboOffer/1752601689004_ACOnK.webp",
+//       "title":"Cherry Tomatoes",
+//       "description":"Mini red tomatoes perfect for salads and garnishing.",
+//       "price":80,
+//       "originalPrice":100,
+//       "quantity":{
+//          "amount":250,
+//          "unit":"gram"
+//       },
+//       "category":"vegetables",
+//       "subCategory":"fresh-vegetables",
+//       "totalStock":130,
+//       "offer":20,
+//       "collectionTag":[
+//          "crispy & crunchy"
+//       ]
+//    },
+//    {
+//       "image":"https://egreensapp.s3.ap-south-1.amazonaws.com/LIVE/product/PRO493/1735386881835_cZBt6.png",
+//       "title":"Custard Apple",
+//       "description":"Sweet and creamy fruit with a tropical flavor.",
+//       "price":200,
+//       "originalPrice":240,
+//       "quantity":{
+//          "amount":1,
+//          "unit":"kg"
+//       },
+//       "category":"fruits",
+//       "subCategory":"fresh-fruits",
+//       "totalStock":70,
+//       "offer":17,
+//       "collectionTag":[
+//          "evergreen"
+//       ]
+//    },
+//    {
+//       "image":"https://egreensapp.s3.ap-south-1.amazonaws.com/LIV…12-2023/1689c915-b61e-4117-80b3-b5b96499dabb.webp",
+//       "title":"Zucchini Green",
+//       "description":"Tender and fresh green zucchini for cooking and salads.",
+//       "price":100,
+//       "originalPrice":130,
+//       "quantity":{
+//          "amount":500,
+//          "unit":"gram"
+//       },
+//       "category":"vegetables",
+//       "subCategory":"exotic-vegetables",
+//       "totalStock":90,
+//       "offer":23,
+//       "collectionTag":[
+//          "Exotics"
+//       ]
+//    },
+//    {
+//       "image":"https://egreensapp.s3.ap-south-1.amazonaws.com/LIVE/product/PRO306/30-10-2023/165385e3-0b21-4f55-a46e-fffb0d5528ad.webp",
+//       "title":"Sweet Lime (Mosambi)",
+//       "description":"Refreshing citrus fruit perfect for juice.",
+//       "price":80,
+//       "originalPrice":100,
+//       "quantity":{
+//          "amount":1,
+//          "unit":"kg"
+//       },
+//       "category":"fruits",
+//       "subCategory":"fresh-fruits",
+//       "totalStock":140,
+//       "offer":20,
+//       "collectionTag":[
+//          "summer specials"
+//       ]
+//    },
+//    {
+//       "image":"https://egreensapp.s3.ap-south-1.amazonaws.com/LIV…10-2023/29553713-cef9-46bd-b92f-ec7437ee9f3f.webp",
+//       "title":"Green Peas Pack",
+//       "description":"Fresh green peas rich in protein and fiber.",
+//       "price":50,
+//       "originalPrice":70,
+//       "quantity":{
+//          "amount":500,
+//          "unit":"gram"
+//       },
+//       "category":"vegetables",
+//       "subCategory":"fresh-vegetables",
+//       "totalStock":150,
+//       "offer":29,
+//       "collectionTag":[
+//          "winter"
+//       ]
+//    },
+//    {
+//       "image":"https://egreensapp.s3.ap-south-1.amazonaws.com/LIVE/comboOffer/30-10-2023/2051f9e1-35b6-4b5c-9454-046224690560.webp",
+//       "title":"Papaya",
+//       "description":"Healthy tropical fruit known for digestive benefits.",
+//       "price":70,
+//       "originalPrice":100,
+//       "quantity":{
+//          "amount":1,
+//          "unit":"kg"
+//       },
+//       "category":"fruits",
+//       "subCategory":"fresh-fruits",
+//       "totalStock":100,
+//       "offer":30,
+//       "collectionTag":[
+//          "everyday essentials"
+//       ]
+//    },
+//    {
+//       "image":"https://egreensapp.s3.ap-south-1.amazonaws.com/LIVE/product/PRO055/30-10-2023/139a753d-c3d7-48f8-93e6-34a325515221.png",
+//       "title":"Tangerine Oranges",
+//       "description":"Tangy and sweet small oranges full of vitamin C.",
+//       "price":110,
+//       "originalPrice":140,
+//       "quantity":{
+//          "amount":1,
+//          "unit":"kg"
+//       },
+//       "category":"fruits",
+//       "subCategory":"fresh-fruits",
+//       "totalStock":90,
+//       "offer":21,
+//       "collectionTag":[
+//          "evergreen"
+//       ]
+//    },
+//    {
+//       "image":"https://egreensapp.s3.ap-south-1.amazonaws.com/LIVE/comboOffer/1708964593218_gnDns.png",
+//       "title":"Red Capsicum",
+//       "description":"Bright red bell pepper ideal for stir-fry and salads.",
+//       "price":90,
+//       "originalPrice":120,
+//       "quantity":{
+//          "amount":500,
+//          "unit":"gram"
+//       },
+//       "category":"vegetables",
+//       "subCategory":"exotic-vegetables",
+//       "totalStock":110,
+//       "offer":25,
+//       "collectionTag":[
+//          "Exotics"
+//       ]
+//    },
+//    {
+//       "image":"https://egreensapp.s3.ap-south-1.amazonaws.com/LIV…10-2023/4a83c32e-6032-4d29-97ab-b630b6149c41.webp",
+//       "title":"Mushroom Button Pack",
+//       "description":"Fresh white mushrooms perfect for curries and soups.",
+//       "price":60,
+//       "originalPrice":80,
+//       "quantity":{
+//          "amount":200,
+//          "unit":"gram"
+//       },
+//       "category":"vegetables",
+//       "subCategory":"exotic-vegetables",
+//       "totalStock":90,
+//       "offer":25,
+//       "collectionTag":[
+//          "crispy & crunchy"
+//       ]
+//    },
+//    {
+//       "image":"https://egreensapp.s3.ap-south-1.amazonaws.com/LIV…10-2023/80e9d018-6215-472d-9c9d-d3ce692824f6.webp",
+//       "title":"Tender Coconut",
+//       "description":"Refreshing coconut water and soft edible flesh.",
+//       "price":60,
+//       "originalPrice":80,
+//       "quantity":{
+//          "amount":1,
+//          "unit":"piece"
+//       },
+//       "category":"fruits",
+//       "subCategory":"fresh-fruits",
+//       "totalStock":120,
+//       "offer":25,
+//       "collectionTag":[
+//          "summer specials"
+//       ]
+//    },
+//    {
+//       "image":"https://egreensapp.s3.ap-south-1.amazonaws.com/LIVE/product/PRO179/1727694964692_lAJ04.png",
+//       "title":"Coriander Leaves",
+//       "description":"Freshly picked coriander for garnishing and cooking.",
+//       "price":20,
+//       "originalPrice":30,
+//       "quantity":{
+//          "amount":100,
+//          "unit":"gram"
+//       },
+//       "category":"vegetables",
+//       "subCategory":"leaf-&-herbs",
+//       "totalStock":200,
+//       "offer":33,
+//       "collectionTag":[
+//          "everyday essentials"
+//       ]
+//    },
+//    {
+//       "image":"https://egreensapp.s3.ap-south-1.amazonaws.com/LIV…11-2023/c6b92353-38b4-410f-9d9f-6c38ecc9e569.webp",
+//       "title":"Coconut Whole",
+//       "description":"Whole mature coconut ideal for cooking and pooja.",
+//       "price":40,
+//       "originalPrice":50,
+//       "quantity":{
+//          "amount":1,
+//          "unit":"piece"
+//       },
+//       "category":"fruits",
+//       "subCategory":"fresh-fruits",
+//       "totalStock":100,
+//       "offer":20,
+//       "collectionTag":[
+//          "evergreen"
+//       ]
+//    },
+//    {
+//       "image":"https://egreensapp.s3.ap-south-1.amazonaws.com/LIVE/product/PRO478/30-10-2023/19cd6119-867e-4a74-b47b-f594fa2f3e26.webp",
+//       "title":"Celery Stalks",
+//       "description":"Crisp celery stems great for soups and salads.",
+//       "price":100,
+//       "originalPrice":130,
+//       "quantity":{
+//          "amount":250,
+//          "unit":"gram"
+//       },
+//       "category":"vegetables",
+//       "subCategory":"leaf-&-herbs",
+//       "totalStock":100,
+//       "offer":23,
+//       "collectionTag":[
+//          "Exotics"
+//       ]
+//    },
+//    {
+//       "image":"https://egreensapp.s3.ap-south-1.amazonaws.com/LIVE/product/PRO417.webp",
+//       "title":"Avocado Indian",
+//       "description":"Locally grown creamy avocados packed with nutrients.",
+//       "price":180,
+//       "originalPrice":220,
+//       "quantity":{
+//          "amount":1,
+//          "unit":"kg"
+//       },
+//       "category":"exotics",
+//       "subCategory":"exotic-fruits",
+//       "totalStock":60,
+//       "offer":18,
+//       "collectionTag":[
+//          "Exotics"
+//       ]
+//    },
+//    {
+//       "image":"https://egreensapp.s3.ap-south-1.amazonaws.com/LIVE/product/PRO493/1735386881835_cZBt6.png",
+//       "title":"Beetroot",
+//       "description":"Nutrient-rich red beetroots great for salads and juice.",
+//       "price":40,
+//       "originalPrice":60,
+//       "quantity":{
+//          "amount":1,
+//          "unit":"kg"
+//       },
+//       "category":"vegetables",
+//       "subCategory":"fresh-vegetables",
+//       "totalStock":150,
+//       "offer":33,
+//       "collectionTag":[
+//          "evergreen"
+//       ]
+//    },
+//    {
+//       "image":"https://cdn.vegease.in/home-page/LIVE/1732088925357_Fbo5D.png",
+//       "title":"Pomegranate",
+//       "description":"Juicy ruby-red pomegranate seeds rich in antioxidants.",
+//       "price":160,
+//       "originalPrice":200,
+//       "quantity":{
+//          "amount":1,
+//          "unit":"kg"
+//       },
+//       "category":"fruits",
+//       "subCategory":"fresh-fruits",
+//       "totalStock":90,
+//       "offer":20,
+//       "collectionTag":[
+//          "evergreen"
+//       ]
+//    },
+//    {
+//       "image":"https://egreensapp.s3.ap-south-1.amazonaws.com/LIVE/comboOffer/1752601689004_ACOnK.webp",
+//       "title":"Lemon Pack",
+//       "description":"Fresh yellow lemons perfect for juice and garnishing.",
+//       "price":30,
+//       "originalPrice":40,
+//       "quantity":{
+//          "amount":250,
+//          "unit":"gram"
+//       },
+//       "category":"vegetables",
+//       "subCategory":"fresh-vegetables",
+//       "totalStock":200,
+//       "offer":25,
+//       "collectionTag":[
+//          "everyday essentials"
+//       ]
+//    }
+// ];
+
+// const transformedProducts = productsData.map(product => ({
+//   ...product,
+//   quantity: `${product.quantity.amount} ${product.quantity.unit}`
+// }));
+
+// const initialState = {
+//   products: transformedProducts,
+//   selectedProduct: null,
+// };
+
+// const productsSlice = createSlice({
+//   name: "products",
+//   initialState,
+//   reducers: {
+//     setProducts: (state, action) => {
+//       state.products = action.payload;
+//     },
+//     selectProduct: (state, action) => {
+//       state.selectedProduct = state.products.find(
+//         (product) => product.id === action.payload
+//       );
+//     },
+//     clearSelectedProduct: (state) => {
+//       state.selectedProduct = null;
+//     },
+//     addProduct: (state, action) => {
+//       state.products.push(action.payload);
+//     },
+//     removeProduct: (state, action) => {
+//       state.products = state.products.filter(
+//         (product) => product.id !== action.payload
+//       );
+//     },
+//   },
+// });
+
+// export const {
+//   setProducts,
+//   selectProduct,
+//   clearSelectedProduct,
+//   addProduct,
+//   removeProduct,
+// } = productsSlice.actions;
+
+// export default productsSlice.reducer;
+
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import productsData from "../../data/products.json";
+
+// Transform products data to include formatted quantity string
+const transformedProducts = productsData.map(product => ({
+  ...product,
+  quantityDisplay: `${product.quantity.amount} ${product.quantity.unit}`
+}));
+
+// Async thunk to load products from JSON (simulates API call with delay)
+export const fetchProducts = createAsyncThunk(
+  "products/fetchProducts",
+  async (_, { rejectWithValue }) => {
+    try {
+      // Simulate network delay
+      await new Promise(resolve => setTimeout(resolve, 300));
+      console.log("Products loaded from JSON file");
+      return transformedProducts;
+    } catch (err) {
+      return rejectWithValue("Failed to load products");
+    }
+  }
+);
+
+const initialState = {
+  products: transformedProducts,
+  selectedProduct: null,
+  isLoading: false,
+  error: null,
+};
+
+const productsSlice = createSlice({
+  name: "products",
+  initialState,
+  reducers: {
+    setProducts: (state, action) => {
+      state.products = action.payload;
+    },
+    selectProduct: (state, action) => {
+      state.selectedProduct = state.products.find(
+        (product) => product._id === action.payload
+      );
+    },
+    clearSelectedProduct: (state) => {
+      state.selectedProduct = null;
+    },
+    addProduct: (state, action) => {
+      state.products.push(action.payload);
+    },
+    removeProduct: (state, action) => {
+      state.products = state.products.filter(
+        (product) => product.id !== action.payload
+      );
+    },
+  },
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchProducts.pending, (state) => {
+        state.isLoading = true;
+        state.error = null;
+      })
+      .addCase(fetchProducts.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.products = action.payload;
+      })
+      .addCase(fetchProducts.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
+      });
+  }
+});
+
+export const {
+  setProducts,
+  selectProduct,
+  clearSelectedProduct,
+  addProduct,
+  removeProduct
+} = productsSlice.actions;
+
+export default productsSlice.reducer;
