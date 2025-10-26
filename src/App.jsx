@@ -20,7 +20,7 @@ import CheckAuth from "./components/common/CheckAuth";
 import Login from "./components/common/Login";
 import Register from "./components/common/Register";
 import ScrollToTop from "./Utils/ScrollToTop";
-import  {fetchUserWithToken}  from "./store/slice/authSlice";
+// import  {fetchUserWithToken}  from "./store/slice/authSlice";
 // import  {fetchUserWithToken}  from "../src/Store/slice/authSlice";
 import { fetchServerCart, mergeLocalCartAction } from "./store/slice/cartSlice";
 import Loader from "./components/common/Loader";
@@ -31,12 +31,12 @@ function App() {
   const location = useLocation();
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    // Auto-login if token exists
-    if (!user && localStorage.getItem("token")) {
-      dispatch(fetchUserWithToken());
-    }
-  }, [dispatch, user]);
+  // useEffect(() => {
+  //   // Auto-login if token exists
+  //   if (!user && localStorage.getItem("token")) {
+  //     dispatch(fetchUserWithToken());
+  //   }
+  // }, [dispatch, user]);
 
 
   // Check if the current location is for modal overlay
