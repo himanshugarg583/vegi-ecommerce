@@ -20,8 +20,6 @@ import CheckAuth from "./components/common/CheckAuth";
 import Login from "./components/common/Login";
 import Register from "./components/common/Register";
 import ScrollToTop from "./Utils/ScrollToTop";
-// import  {fetchUserWithToken}  from "./store/slice/authSlice";
-// import  {fetchUserWithToken}  from "../src/Store/slice/authSlice";
 import { fetchServerCart, mergeLocalCartAction } from "./store/slice/cartSlice";
 import Loader from "./components/common/Loader";
 import ProfilePage from "./pages/shopping/ProfilePage";
