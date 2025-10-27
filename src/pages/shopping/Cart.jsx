@@ -22,11 +22,11 @@ import {
   updateQuantityAction,
   getCartAction,
   addItemToCartAction,
-} from "../../store/slice/cartSlice";
+} from "../../Store/slice/cartSlice";
 
 import { debounce } from "../../Utils/debounce";
 import ProductDetailLayout from "../../components/shopping/ProductDetailLayout";
-import { clearSelectedProduct } from "../../store/slice/productsSlice";
+import { clearSelectedProduct } from "../../Store/slice/productsSlice";
 import CheckoutPopup from "../../components/shopping/CheckoutPopup";
 
 const Cart = ({ openCheckoutPopup = false }) => {

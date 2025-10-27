@@ -4,7 +4,7 @@ import {
   selectProduct,
   clearSelectedProduct,
   fetchProducts,
-} from "../../store/slice/productsSlice";
+} from "../../Store/slice/productsSlice";
 import ProductCard from "../../components/shopping/ProductCard";
 import ProductDetailLayout from "../../components/shopping/ProductDetailLayout";
 import CategoriesSection from "../../components/shopping/CategoriesSection";

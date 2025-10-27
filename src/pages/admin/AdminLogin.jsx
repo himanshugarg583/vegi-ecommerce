@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Key } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { loginUser, setAuthToken, setUser } from "../../store/slice/authSlice";
+import { loginUser, setAuthToken, setUser } from "../../Store/slice/authSlice";
 import { toast } from "react-toastify";
 
 const INITIAL_FORM = { email: "", password: "" };

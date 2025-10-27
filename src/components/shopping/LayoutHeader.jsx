@@ -12,9 +12,9 @@ import {
 import Navbar from "../shopping/Navbar";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { selectProduct } from "../../store/slice/productsSlice";
-import { logout } from "../../store/slice/authSlice";
-import { getCart } from "../../store/slice/cartSlice";
+import { selectProduct } from "../../Store/slice/productsSlice";
+import { logout } from "../../Store/slice/authSlice";
+import { getCart } from "../../Store/slice/cartSlice";
 
 function LayoutHeader() {
   const [sidebarOpen, setSidebarOpen] = useState(false);

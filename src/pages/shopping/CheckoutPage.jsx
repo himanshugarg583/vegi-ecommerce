@@ -18,13 +18,13 @@ import {
 import { toast } from "react-toastify";
 
 import ProductDetailLayout from "../../components/shopping/ProductDetailLayout";
-import { clearSelectedProduct } from "../../store/slice/productsSlice";
+import { clearSelectedProduct } from "../../Store/slice/productsSlice";
 import {
   removeItemFromCartAction,
   clearCartAction,
   updateQuantityAction,
   getCartAction,
-} from "../../store/slice/cartSlice";
+} from "../../Store/slice/cartSlice";
 import { debounce } from "../../Utils/debounce";
 
 const CheckoutPage = () => {

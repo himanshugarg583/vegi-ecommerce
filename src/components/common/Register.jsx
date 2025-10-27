@@ -7,7 +7,7 @@ import {
   sendOTP,
   verifyOTP,
   registerUser,
-} from "../../store/slice/authSlice.js";
+} from "../../Store/slice/authSlice";
 
 const INITIAL_FORM = {
   email: "",

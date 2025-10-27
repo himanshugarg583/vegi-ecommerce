@@ -8,11 +8,11 @@ import {
   selectProduct,
   clearSelectedProduct,
   fetchProducts,
-} from "../../store/slice/productsSlice";
+} from "../../Store/slice/productsSlice";
 import CategoriesSection from "../../components/shopping/CategoriesSection";
 import { Link } from "react-router-dom";
 import ProductCarousel from "../../components/shopping/ProductCarousel";
-import { addItemToCart, addItemToCartAction } from "../../store/slice/cartSlice";
+import { addItemToCart, addItemToCartAction } from "../../Store/slice/cartSlice";
 import { toast } from "react-toastify";
 import ExclusiveProducts from "../../components/shopping/ExclusiveProducts";
 import Loader from "../../components/common/Loader"

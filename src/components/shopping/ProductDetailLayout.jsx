@@ -2,8 +2,8 @@ import React from "react";
 import { X } from "lucide-react";
 import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
-import { addItemToCartAction } from "../../store/slice/cartSlice";
-import { clearSelectedProduct } from "../../store/slice/productsSlice";
+import { addItemToCartAction } from "../../Store/slice/cartSlice";
+import { clearSelectedProduct } from "../../Store/slice/productsSlice";
 
 const ProductDetailLayout = ({ product }) => {
   const dispatch = useDispatch();

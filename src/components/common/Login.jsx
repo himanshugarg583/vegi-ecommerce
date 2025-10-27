@@ -3,8 +3,8 @@ import { LogIn } from "lucide-react";
 import { loginFormControls } from "../../config/authConfig.js";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { loginUser, setAuthToken, setUser } from "../../store/slice/authSlice.js";
-import { mergeLocalCartToServer } from "../../store/slice/cartSlice.js";
+import { loginUser, setAuthToken, setUser } from "../../Store/slice/authSlice.js";
+import { mergeLocalCartToServer } from "../../Store/slice/cartSlice.js";
 import { toast } from "react-toastify";
 
 const INITIAL_FORM = { email: "", password: "" };

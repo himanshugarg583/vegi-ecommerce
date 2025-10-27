@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { increment, decrement, incrementByAmount } from '../../Store/Slices/counterSlice.js';
+import { increment, decrement, incrementByAmount } from '../../Store/slice/counterSlice.js';
 
 
 function Reduxtest() {

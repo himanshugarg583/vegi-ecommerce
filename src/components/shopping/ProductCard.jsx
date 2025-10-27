@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
-import { addItemToCart, addItemToCartAction } from "../../store/slice/cartSlice";
+import { addItemToCart, addItemToCartAction } from "../../Store/slice/cartSlice";
 
 const ProductCard = ({ product, handleProductDetail, viewMode = "grid" }) => {
   const dispatch = useDispatch();

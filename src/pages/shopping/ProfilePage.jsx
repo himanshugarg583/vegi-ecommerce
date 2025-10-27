@@ -7,7 +7,8 @@ import {
   addAddress,
   deleteAddress,
   clearUserMessages,
-} from "../../store/slice/userSlice";
+} from "../../Store/slice/userSlice";
+import { clearSelectedProduct } from "../../Store/slice/productsSlice";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import {
